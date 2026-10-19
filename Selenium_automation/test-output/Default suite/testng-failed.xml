@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.Selenium_automation.new_demotestng">
+      <class name="test.Selenium_automation.parameterized_testng">
         <methods>
-          <include name="show"/>
+          <include name="display_number"/>
         </methods>
-      </class> <!-- test.Selenium_automation.new_demotestng -->
+      </class> <!-- test.Selenium_automation.parameterized_testng -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
