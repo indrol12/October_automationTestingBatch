@@ -11,7 +11,7 @@ public class new_demotestng {
 	{
 		System.out.println("My first test case");
 	}
-	@Test
+	@Test(groups= {"smoke"})
 	public void xyz()
 	{
 		System.out.println("my last test case");

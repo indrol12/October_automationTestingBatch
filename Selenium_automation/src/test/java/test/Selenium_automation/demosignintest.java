@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class demosignintest {
 	static ChromeDriver driver;
-	@Test
+	@Test(groups= {"smoke"})
 	void demolaunch()
 	{
 		driver=new ChromeDriver();

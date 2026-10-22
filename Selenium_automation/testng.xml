@@ -2,9 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="fctsuite">
   <test thread-count="5" name="Test">
-  <parameter name="P" value="90"></parameter>
+  <groups>
+  <run>
+        <exclude name="smoke"></exclude>
+  </run>
+  </groups>
+
     <classes>
-      <class name="test.Selenium_automation.parameterized_testng"/>
+      <class name="test.Selenium_automation.annotation"/>
+        <class name="test.Selenium_automation.demosignintest"/>
+       <class name="test.Selenium_automation.new_demotestng"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

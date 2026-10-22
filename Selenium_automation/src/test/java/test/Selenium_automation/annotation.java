@@ -11,7 +11,7 @@ public class annotation {
 	{
 		System.out.println("@AfterTest");
 	}
-	@Test
+	@Test(groups= {"smoke"})
 	public void email()
 	{
 		System.out.println("@Test");
