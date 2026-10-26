@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.Selenium_automation.parameterized_testng">
+      <class name="Conceptsof_Listener.OrangeHRM">
         <methods>
-          <include name="display_number"/>
+          <include name="logout"/>
+          <include name="verify_launch"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- test.Selenium_automation.parameterized_testng -->
+      </class> <!-- Conceptsof_Listener.OrangeHRM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

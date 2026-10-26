@@ -12,7 +12,8 @@ public class basicdriver_methods {
 		//maximize browser
 		driver.manage().window().maximize();
 		
-		//launch sppu
+		//launch m
+		
 		driver.get("https://unipune.ac.in/?pp.aspx");
 		Thread.sleep(1000);
 		//navigate webapp
