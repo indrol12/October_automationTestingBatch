@@ -7,17 +7,17 @@ import io.cucumber.java.en.When;
 public class Gmaillogin {
 
 	@Given("User should be registered")
-	void precondition()
+	public void precondition()
 	{
 		System.out.println("User is registered!!");
 	}
 	@When("Open gmail login page,enter valid credentials")
-	void teststeps()
+	public void teststeps()
 	{
 		System.out.println("Email:Kaveri@gmail.com & password:kaveri@123");
 	}
 	@Then("Gmail login should be successfull")
-	void expectedresult()
+	public void expectedresult()
 	{
 		System.out.println("Login success");
 	}
