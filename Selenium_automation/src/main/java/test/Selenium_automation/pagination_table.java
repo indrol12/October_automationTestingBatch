@@ -9,39 +9,34 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class pagination_table {
-public static void main(String[] args) {
+public static void main(String[] args) throws InterruptedException {
 		
 		EdgeDriver driver=new EdgeDriver();
-				
+				driver.manage().window().maximize();
 				driver.get("https://testautomationpractice.blogspot.com/");
 				
-				//pagination table
-				WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-				By tablelLocator= By.cssSelector("table#productTable");
-				wait.until(d -> d.findElement(tablelLocator).isDisplayed());
-				
-				for(int  page =1;page <=4;page++) {
-					
-					System.out.println("testing  page"+page);
-					
-				 By pageButton = By.xpath("//ul[contains(@class,'pagination')]");
-				 driver.findElement(pageButton).click();
-				 // WebElement table = wait.until(n
-				 List<WebElement>rows = driver.findElements(By.xpath("//tbody/tr"));
-				 
-				 for(int r=1;r<rows.size();r++) {
-				
-					WebElement checkbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
-					 System.out.println(checkbox.getText());
-					if(!checkbox.isSelected())
-					 {
-						 checkbox.click();
-					 }
+				for(int page = 1; page <= 4;page++) {
 					 
-				 }
-				 System.out.println("page"+ page + "testing completed");
-				 
-				 }
-				wait.until(d-> false);
+					//find Element
+					List<WebElement>checkboxes = driver.findElements(By.xpath("//td/input"));
+					
+					//click checkboxes
+					for(WebElement c : checkboxes) {
+						
+						if(c.isDisplayed()&&c.isEnabled()&&!c.isSelected()) {
+							
+							c.click();
+							}
+					}
+					
+					Thread.sleep(2000);
+					
+					driver.findElement(By.xpath("//ul[@id='pagination']//a[normalize-space()='"+page+"']")).click();
+					Thread.sleep(2000);
+					
+					
+				}
+				
+				
 			}
 }
