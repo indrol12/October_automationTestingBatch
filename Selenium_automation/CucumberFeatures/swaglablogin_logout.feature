@@ -1,5 +1,5 @@
 Feature: saucedemo login logout functionality
-
+  @Smoke
   Scenario Outline: verify login and logout should be successfull
     Given Launch Saucedemo website
     When enter  username as "<username>" also password as "<password>"

@@ -1,5 +1,5 @@
 Feature: Orangehrm Website Login Functionality
-
+  @Regression
   Scenario: verify login successfull with valid credentials
     Given Launch orangehrm website
     When enter username as "Admin" also enter password as "admin123"

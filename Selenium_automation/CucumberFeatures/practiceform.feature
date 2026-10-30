@@ -1,5 +1,5 @@
 Feature: Student Registration form
-
+  @Smoke
   Scenario: verify name,surname and email inserted successfully
     Given practice form should launch
     When enter name,surname and email

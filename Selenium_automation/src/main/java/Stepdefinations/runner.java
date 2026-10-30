@@ -7,8 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="CucumberFeatures/swaglablogin_logout.feature",
-		glue= {"Stepdefinations"},
+		features="CucumberFeatures",
+		tags = "@Smoke",
+		glue= {"Stepdefinations","hooks"},
 				  plugin = {
 					        "pretty",
 					        "html:target/cucumber-report.html",
